@@ -27,7 +27,7 @@ const Camera = () => {
                 props="mt-[30px]"
             />
         </div>
-        <div className="h-[361px] w-[378px] bg-[#B60303]">
+        <div className="h-[361px] w-[378px]">
 
         </div>
     </div>

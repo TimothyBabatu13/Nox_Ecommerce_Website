@@ -25,7 +25,8 @@ const SubscribeForm = () => {
             id=""
             value={email}
             onChange={handleChange}
-            className="bg-[#FFFFFF] h-[40px] w-[300px] py-[28px] px-[56px] rounded-[5px] mr-[16px]" 
+            className="bg-[#FFFFFF] text-[16px] h-[40px] w-[350px] py-[28px] px-[56px] rounded-[5px] mr-[16px]"
+            placeholder="Enter your email address..." 
         />
         <Image 
             height={24} 
@@ -36,7 +37,7 @@ const SubscribeForm = () => {
         />
         <button 
             type="submit"
-            className="bg-primary text-[#FFFFFF] py-[15px] px-[20px] rounded-[5px]"
+            className="bg-primary text-[#FFFFFF] py-[15px] px-[30px] rounded-[5px]"
         >
             Subscribe
         </button>
