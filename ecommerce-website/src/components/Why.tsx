@@ -51,7 +51,7 @@ const Why = () => {
     <main className='bg-[#F6F6F6] mt-[30px]'>
         <div className='w-[90%] mx-auto'>
             <h1 className='text-fiftySix font-sevenHundred text-center pt-[100px] mb-[100px]'>Why Choose MarcsonicMall?</h1>
-            <div className='grid grid-cols-3 gap-[50px]'>
+            <div className='grid md:grid-cols-3 gap-[50px] pb-[149px]'>
                 {data.map((item, id)=>(
                     <WhyCard 
                         key={id}

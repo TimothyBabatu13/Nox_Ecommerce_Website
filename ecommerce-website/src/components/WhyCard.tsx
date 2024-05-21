@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
+import BodyMiniButton from "./BodyMiniButton"
 
 interface data {
     src: string,
@@ -24,18 +24,11 @@ const WhyCard = ({ src, title, body, link }: data) => {
         <h5 
             className="text-[#827F7F] font-fourHundrend text-sixteen mb-[24px]"
         >{body}</h5>
-        <Link 
-            href={link}
-            className="flex w-fit mx-auto"
-        >   Learn More 
-            <Image 
-                width={22}
-                height={20} 
-                alt="link" 
-                src="/link.svg"
-                className="ml-[4px]"
-            />
-        </Link>
+        <BodyMiniButton 
+            link={link}
+            text="Learn More"
+            props="w-fit mx-auto"
+        />
     </div>
   )
 }

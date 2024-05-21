@@ -1,8 +1,9 @@
-import Link from "next/link"
+
 import Image from "next/image"
+import BodyButton from "./BodyButton"
 const Body = () => {
   return (
-    <section className="flex mt-[52px] ">
+    <section className="md:flex mt-[52px] ">
         <main className=" flex-grow-[2]">
             <h1 
                 className="text-ninetySix text-[#201A1A] font-eightHundred"
@@ -16,18 +17,10 @@ const Body = () => {
             <h5 
                 className="text-sixteen text-[#909090] mb-[40px]"
             >The best, high-quality audio equipment all in one place</h5>
-            <Link 
-                className="bg-primary text-primary font-sixHundrend text-sixteen py-[16px] px-[24px] flex items-center w-fit rounded-[5px]" 
-                href={"/"}
-            >Shop Now 
-                <Image 
-                    height={20} 
-                    width={20} 
-                    alt="dropdown" 
-                    src={"/dropdown.svg"}
-                    className="ml-[20px]" 
-                />
-            </Link>
+            <BodyButton 
+                text="Shop Now"
+                href="/"
+            />
         </main>
         <main className="relative">
             <Image src={"/body_main.svg"} width={400} height={651} alt="body_main" />

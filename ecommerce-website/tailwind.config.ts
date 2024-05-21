@@ -20,7 +20,9 @@ const config: Config = {
       "sixteen": "16px",
       "fourtyEight": "48px",
       "twentyFour": "24px",
-      "fiftySix": "56px"
+      "fiftySix": "56px",
+      "thirtyFive": "35px",
+      "fourteen": "14px",
     },
     colors: {
       "primary": "#FFFFFF",
@@ -28,7 +30,7 @@ const config: Config = {
     },
     backgroundColor: {
       "primary": "#AF1313",
-      "secondary": ""
+      "secondary": "#0E0C0F"
     },
     fontWeight: {
       "sevenHundred": "700",

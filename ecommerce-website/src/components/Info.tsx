@@ -25,7 +25,7 @@ const data : Data[] = [
 
 const Info = () => {
   return (
-    <div className="flex justify-between mt-[81px] border py-[40px] ">
+    <div className=" md:flex justify-between mt-[81px] border py-[40px] ">
         {data.map((item, id)=>(
             <InfoCard 
                 border={id != data.length - 1 ? true : false} 
