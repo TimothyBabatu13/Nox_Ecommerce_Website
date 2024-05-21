@@ -20,6 +20,7 @@ const Body = () => {
             <BodyButton 
                 text="Shop Now"
                 href="/"
+                props=""
             />
         </main>
         <main className="relative">
