@@ -1,16 +1,19 @@
 import Image from "next/image"
 import BodyButton from "./BodyButton"
 
-const IMAGE = ()=> {
+interface imageData {
+    className : string
+}
+const IMAGE = ({ className } : imageData )=> {
     return(
         <div>
-            <Image src="/speaker.svg" height={644} width={531} alt="speaker"/>
+            <Image src="/speaker.svg" className={className} height={644} width={531} alt="speaker"/>
         </div>
     )
 }
 const Model = () => {
   return (
-    <main className="grid grid-cols-3 place-items-center gap-[60px] mt-[174px] mb-[22px]">
+    <main className="grid grid-cols-2 md:grid-cols-3 place-items-center gap-[60px] mt-[174px] mb-[22px]">
         <div>
             <h1 className="font-sevenHundred text-thirtyFive">Models That Meet</h1>
             <h1 className="font-sevenHundred text-thirtyFive mb-[24px]">Your Needs</h1>
@@ -22,8 +25,8 @@ const Model = () => {
                 props=""
             />
         </div>
-        <IMAGE />
-        <IMAGE />
+        <IMAGE className=""/>
+        <IMAGE className="hidden md:block"/>
     </main>
   )
 }

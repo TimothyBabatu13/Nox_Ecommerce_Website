@@ -11,7 +11,7 @@ const H1 = ({ text }: data)=> {
 const Camera = () => {
   return (
     <div 
-        className="h-[600px] w-[100%] flex items-center justify-between pl-[120px] pr-[180px]" 
+        className="h-[auto] min-h-[600px] w-[100%] flex items-center justify-between pl-[120px] pr-[180px]" 
         style={{background: "url('/camera.svg')", backgroundPosition: "center/center", backgroundSize: "contain", backgroundRepeat: "no-repeat"}}
     >
         <div>

@@ -87,7 +87,11 @@ interface SocialMediaLinkData {
 }
 const SocialMediaLink = ({ img, href, name } : SocialMediaLinkData)  => {
     return (
-        <Link href={href}>
+        <Link 
+            href={href}
+            className="mr-[20px] lg:mr-0 hover:-translate-y-[10px] transition-all"
+            target="_blank"
+        >
             <Image 
                 width={40}
                 height={40}
@@ -107,20 +111,20 @@ const socialMediaData : SocialMediaLinkData[] = [
     {
         name: "Instagram",
         img: "/instagram.svg",
-        href: ""
+        href: "https://www.instagram.com/timothy_akanbi"
     },
     {
         name: "Twitter",
         img: "/twitter.svg",
-        href: ""
+        href: "https://www.twitter.com/timothy_akanbii"
     },
 ]
 const FooterLinks = () => {
   return (
     <section 
-        className="flex justify-between text-[#A7A7A7] pt-[112px] px-[120px]"
+        className="flex flex-col lg:flex-row justify-between text-[#A7A7A7] pt-[112px] px-[120px]"
     >
-        <div className="grid grid-cols-3 gap-[20px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
             {
                 data.map(((item, id) =>(
                     <div key={id}>
@@ -130,7 +134,7 @@ const FooterLinks = () => {
                                 <Link 
                                     key={`a${id}`} 
                                     href={item.link}
-                                    className="block text-sixteen font-fourHundrend mb-[19px]"
+                                    className="block text-sixteen font-fourHundrend mb-[19px] transition hover:opacity-[0.5]"
                                 >
                                     {item.text}
                                 </Link>
@@ -142,7 +146,7 @@ const FooterLinks = () => {
         </div>
         <div>
            <H1 text="Connect With Us" />
-           <div className="flex items-center justify-between">
+           <div className="flex items-center lg:justify-between">
             {
                 socialMediaData.map((item, id)=>(
                     <SocialMediaLink 

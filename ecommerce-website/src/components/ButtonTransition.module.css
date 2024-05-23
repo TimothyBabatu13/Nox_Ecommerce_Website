@@ -1,0 +1,12 @@
+.bodyBotton, .miniButton{
+    transition: all;
+    transition-duration: 150ms;
+}
+
+.bu:hover .bodyBotton{
+    margin-left: 25px;
+}
+
+.bu:hover .miniButton {
+    margin-left: 10px;
+}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import HeaderClientComponent from "./HeaderClientComponent";
 
 
 const Header = () => {
@@ -15,17 +16,20 @@ const Header = () => {
         </Link>
 
         <div>
-            <Link 
-                href={"/login"}
-                className="text-secondary"
-            >
-                 Login 
-            </Link>
-            <Link 
-                href={"/register"}
-                className="bg-primary font-sevenHundred text-primary py-[16px] px-[24px] rounded-[5px] ml-[30px]"
-            > Register Now 
-            </Link>
+            <HeaderClientComponent>
+                <Link 
+                    href={"/login"}
+                    className="text-secondary"
+                >
+                    Login 
+                </Link>
+                <Link 
+                    href={"/register"}
+                    className="bg-primary font-sevenHundred text-primary py-[16px] px-[24px] rounded-[5px] ml-[30px] transition-all hover:bg-[#af1313d0]"
+                > Register Now 
+                </Link>
+            </HeaderClientComponent>
+            
         </div>
     </header>
   )

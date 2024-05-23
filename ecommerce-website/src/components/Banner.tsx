@@ -9,7 +9,7 @@ interface data {
 
 const Banner = ({ reverse, title, text } : data) => {
   return (
-    <section className={`flex ${reverse ? "flex-row-reverse": ""} items-center justify-between bg-[#FAF1FE]`}>
+    <section className={`hidden md:flex ${reverse ? "flex-row-reverse": ""} items-center justify-between bg-[#FAF1FE]`}>
         <div className="w-[50%] text-center">
             <h1 className=" text-thirtyFive font-sevenHundred mb-[16px]">{title}</h1>
             <h5 className="text-[#909090] text-fourteen font-fourHundrend mb-[40px]">{text}</h5>
@@ -24,7 +24,7 @@ const Banner = ({ reverse, title, text } : data) => {
             width={500} 
             height={590} 
             alt=""
-            className=" flex-grow"
+            className=" hidden md:block flex-grow"
         />
     </section>
   )

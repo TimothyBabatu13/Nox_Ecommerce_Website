@@ -1,6 +1,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import css from "@/components/ButtonTransition.module.css";
+
 
 interface data {
     link: string,
@@ -11,14 +13,14 @@ const BodyMiniButton = ({ link, text, props }: data) => {
   return (
     <Link 
         href={link}
-        className={`flex ${props != undefined ? props : ""}`}
+        className={`flex ${css.bu} ${props != undefined ? props : ""}`}
     >   {text} 
         <Image 
             width={22}
             height={20} 
             alt="link" 
             src="/link.svg"
-            className="ml-[4px]"
+            className={`ml-[4px] ${css.miniButton}`}
         />
     </Link>
   )

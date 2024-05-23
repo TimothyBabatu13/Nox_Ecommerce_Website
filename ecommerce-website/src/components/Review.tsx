@@ -8,7 +8,7 @@ interface H1Data {
 
 const H1 = ({ text }: H1Data ) => {
     return(
-        <h1 className=" text-thirtyFive font-sevenHundred leading-[1.2]">{text}</h1>
+        <h1 className=" text-thirtyFive font-sevenHundred text-center md:text-left leading-[1.2]">{text}</h1>
     )
 }
 
@@ -20,7 +20,7 @@ const H5 = ({ text} : H1Data ) => {
 
 const Review = () => {
   return (
-    <main className="flex items-center mb-[162px]">
+    <main className="flex flex-col md:flex-row items-center mb-[162px]">
         <div >
             <H1 
                 text="What People Say"

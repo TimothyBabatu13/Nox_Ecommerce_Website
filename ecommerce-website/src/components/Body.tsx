@@ -23,7 +23,7 @@ const Body = () => {
                 props=""
             />
         </main>
-        <main className="relative">
+        <main className="relative hidden md:block">
             <Image src={"/body_main.svg"} width={400} height={651} alt="body_main" />
             {/* <Image 
                 src={"/main_overlay.svg"} 
