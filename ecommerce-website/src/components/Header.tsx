@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import HeaderClientComponent from "./HeaderClientComponent";
+import UserProfile from "./UserProfile";
+import LinkImage from "./LinkImage";
+import Cart from "./Cart";
 
 
 const Header = () => {
@@ -17,7 +20,15 @@ const Header = () => {
 
         <div>
             <HeaderClientComponent>
-                <Link 
+                <UserProfile />
+                <LinkImage
+                    href="/home/saved"
+                    src="/liked.svg"
+                    text="Saved"
+                />
+                <Cart />
+            </HeaderClientComponent>
+                {/* <Link 
                     href={"/login"}
                     className="text-secondary"
                 >
@@ -27,8 +38,8 @@ const Header = () => {
                     href={"/register"}
                     className="bg-primary font-sevenHundred text-primary py-[16px] px-[24px] rounded-[5px] ml-[30px] transition-all hover:bg-[#af1313d0]"
                 > Register Now 
-                </Link>
-            </HeaderClientComponent>
+                </Link> */}
+           
             
         </div>
     </header>

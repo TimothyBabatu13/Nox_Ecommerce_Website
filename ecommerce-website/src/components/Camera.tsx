@@ -11,8 +11,8 @@ const H1 = ({ text }: data)=> {
 const Camera = () => {
   return (
     <div 
-        className="h-[auto] min-h-[600px] w-[100%] flex items-center justify-between pl-[120px] pr-[180px]" 
-        style={{background: "url('/camera.svg')", backgroundPosition: "center/center", backgroundSize: "contain", backgroundRepeat: "no-repeat"}}
+        className="h-[auto] min-h-[600px] w-[100%] flex items-center justify-center md:justify-normal md:pl-[120px]" 
+        style={{background: "url('/camera.svg')", backgroundPosition: "center/center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}
     >
         <div>
             <H1 
@@ -26,9 +26,6 @@ const Camera = () => {
                 text="Shop Now"
                 props="mt-[30px]"
             />
-        </div>
-        <div className="h-[361px] w-[378px]">
-
         </div>
     </div>
   )
