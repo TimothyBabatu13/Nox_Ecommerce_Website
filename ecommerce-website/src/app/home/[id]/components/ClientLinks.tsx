@@ -50,6 +50,7 @@ const ClientLinks = ({ id } : ClientLinksType) => {
     const numberOfReviews: number = 8;
 
     useEffect(()=>{
+        
     },[pathname])
 
   return (

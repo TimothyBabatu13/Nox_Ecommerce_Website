@@ -5,6 +5,7 @@ import Link from "next/link";
 import ClientLinks from "./components/ClientLinks";
 import SimilarProducts from "./components/SimilarProducts";
 import WhatWeOffer from "./components/WhatWeOffer";
+import Scroll from "./components/Scroll";
 
 export const metadata: Metadata = {
   title: "MARCSONIC",
@@ -44,6 +45,7 @@ export default function RootLayout({
     const { id } = params;
   return (
     <main className="mt-[42px]">
+      <Scroll />
       <div 
         className="grid md:grid-cols-2 gap-[40px]"
       >

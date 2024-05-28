@@ -7,15 +7,20 @@ import { useState } from "react";
 
 const CopyLinkButton = () => {
     
-    const [copy, setCopy] = useState(false);
+    const [copy, setCopy] = useState<boolean>(false);
 
-    const pathName = usePathname();
+    const pathName : string = usePathname();
 
 
     const handleClick = () => {
-        console.log(pathName);
+        let path : string = pathName
+        const pathNameArray : string[] = pathName.split("/");
+        if(pathNameArray.length === 4){
+            const newArr = [pathNameArray[0], pathNameArray[1], pathNameArray[2]];
+            path = newArr.join("/");
+        }
         const baseURL = 'http://localhost:3000'
-        const url = `${baseURL}${pathName}`;
+        const url = `${baseURL}${path}`;
         navigator.clipboard.writeText(url).then(res => {
             setCopy(true)
         })

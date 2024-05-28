@@ -3,7 +3,7 @@ import Banner from "./components/Banner"
 import BestDeals from "./components/BestDeals"
 import MoreToLike from "./components/MoreToLike"
 import Image from "next/image"
-import BlackFriday from "./components/BlackFriday"
+import BlackFriday from "./components/BlackFriday";
 
 const page = () => {
   return (

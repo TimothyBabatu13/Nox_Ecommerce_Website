@@ -1,5 +1,6 @@
 import Review from "../../components/Review"
 import AddReview from "./AddReview"
+import AverageReviewRating from "./AverageReviewRating"
 import User from "./User"
 
 
@@ -8,14 +9,7 @@ const page = () => {
     <section>
         <div className="flex items-center mb-[35px]">
             <h1 className="text-[#1D1616] text-eighteen font-[500] mr-[32px]">Average Rating: </h1>
-            <div className="flex items-center">
-                <Review />
-                <Review />
-                <Review />
-                <Review />
-                <Review />
-                <Review />
-            </div>
+            <AverageReviewRating />
         </div>
         <User 
             src="/man's image.jpg"
