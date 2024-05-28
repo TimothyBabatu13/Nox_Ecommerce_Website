@@ -1,5 +1,6 @@
 import React from 'react'
 import LinkImage from './LinkImage'
+import { CartIcon } from './SVGs';
 
 const Cart = () => {
   const number = 2;
@@ -7,7 +8,7 @@ const Cart = () => {
     <div className='hidden md:block relative'>
         <LinkImage
             href="/home/cart"
-            src="/cart.svg"
+            children={<CartIcon />}
             text="Cart"
         />
         <div 

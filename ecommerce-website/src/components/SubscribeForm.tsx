@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import React, { useRef, useState } from "react";
+import { EmailIcon } from "./SVGs";
 
 const SubscribeForm = () => {
     const [email, setEmail] = useState<string>("");
@@ -38,15 +38,10 @@ const SubscribeForm = () => {
                 placeholder="Enter your email address..." 
                 ref={ref}
             />
-            <Image 
-                height={24} 
-                width={24} 
-                alt="email" 
-                src="/Email.svg"
-                className="absolute top-[50%] -translate-y-1/2 left-[24px]" 
-                role="button"
-                onClick={handleFocus}
-            />
+           
+            <button className="absolute top-[50%] -translate-y-1/2 left-[24px]" onClick={handleFocus}>
+                <EmailIcon />
+            </button>
         </div>
         <button 
             type="submit"

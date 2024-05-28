@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 import Form from './Form';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Dropdown } from '@/components/SVGs';
 
 
 export const metadata: Metadata = {
@@ -45,13 +46,17 @@ const page = () => {
               className=' text-[#AF1313] bg-[#FFFFFF] border font-sixHundrend ml-[100px] text-sixteen py-[16px] px-[24px] flex items-center w-fit rounded-[5px] mt-[100px]'
             >
               Shop with Marcsonic
-              <Image 
+              <Dropdown 
+                clx='ml-[20px]'
+                color='#AF1313'
+              />
+              {/* <Image 
                 height={20} 
                 width={20} 
                 alt="dropdown" 
                 src={"/dropdownred.svg"}
                 className="ml-[20px]" 
-              />
+              /> */}
             </Link>
           </div>
         </div>

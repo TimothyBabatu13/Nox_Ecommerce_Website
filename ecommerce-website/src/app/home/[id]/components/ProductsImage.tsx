@@ -1,4 +1,5 @@
 "use client";
+import { BackIcon, ForwardIcon } from "@/components/SVGs";
 import Image from "next/image"
 import { useState } from "react";
 
@@ -26,7 +27,7 @@ const ImageComponent = ({ src, active, handleClick } : ImageCOmponentType) => {
 }
 
 interface NavigateButtonsType {
-    src: string,
+    src: any,
     handleClick: any,
     clx: string
 }
@@ -36,12 +37,7 @@ const NavigateButtons = ({ src, handleClick, clx }: NavigateButtonsType) => {
             onClick={handleClick}
             className={`absolute top-[50%] -translate-y-1/2 ${clx}`}
         >
-            <Image 
-                src={src}
-                width={50}
-                height={50}
-                alt="button"
-            />
+            {src}
         </button>
     )
 }
@@ -94,12 +90,12 @@ const ProductsImage = ({ id } : idType) => {
             />
             
             <NavigateButtons 
-                src="/left button.svg"
+                src={<BackIcon />}
                 clx="left-[24px]"
                 handleClick={handleSubtractNumber}
             />
             <NavigateButtons 
-                src="/right button.svg"
+                src={<ForwardIcon />}
                 clx="right-[24px]"
                 handleClick={handleAddNumber}
             />

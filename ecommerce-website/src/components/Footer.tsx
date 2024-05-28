@@ -1,5 +1,3 @@
-import Image from "next/image"
-import Link from "next/link"
 import SubscribeForm from "./SubscribeForm"
 import FooterLinks from "./FooterLinks"
 import CopyRight from "./CopyRight"

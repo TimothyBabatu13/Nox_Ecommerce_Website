@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Input from "./Input"
 import { useState } from "react"
+import { Eye } from "@/components/SVGs";
 
 interface data {
     value: string,
@@ -11,7 +12,8 @@ interface data {
 const Password = ({ value, handleChange } : data ) => {
     const [eye, setEye] = useState<boolean>(true);
     
-    const handleChangeEye = () => {
+    const handleChangeEye = (e: any) => {
+        e.preventDefault();
         setEye(prev => !prev);
     }
 
@@ -26,15 +28,12 @@ const Password = ({ value, handleChange } : data ) => {
         placeholder="Password"
         onChange={handleChange}
     />
-    <Image 
-        src="/eye.svg"
-        width={24}
-        height={14}
-        alt="eye"
-        className="absolute top-[40%] right-[20px] -translate-y-1/2"
-        role="button"
+    <button
         onClick={handleChangeEye}
-    />
+        className="absolute top-[40%] right-[20px] -translate-y-1/2"
+    >
+        <Eye />
+    </button>
 </div>
   )
 }

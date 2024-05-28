@@ -4,6 +4,7 @@ import HeaderClientComponent from "./HeaderClientComponent";
 import UserProfile from "./UserProfile";
 import LinkImage from "./LinkImage";
 import Cart from "./Cart";
+import { LikedIcon } from "./SVGs";
 
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
                 <UserProfile />
                 <LinkImage
                     href="/home/saved"
-                    src="/liked.svg"
+                    children={<LikedIcon clx="mr-[8px]"/>}
                     text="Saved"
                 />
                 <Cart />

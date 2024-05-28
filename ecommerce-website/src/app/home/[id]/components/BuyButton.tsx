@@ -1,9 +1,10 @@
 'use client';
+import { AddIcon, Cart, LikeIcon, SubtractIcon } from "@/components/SVGs";
 import Image from "next/image"
 import { useState } from "react"
 
 interface ButtonsType {
-    src: string,
+    src: any,
     onClick: any
 }
 
@@ -14,18 +15,13 @@ const Buttons = ({ src, onClick } : ButtonsType) => {
             className="w-[40px] h-[48px] border border-[#BFA5A3] flex items-center justify-center"
             onClick={onClick}
         >
-            <Image 
-                src={src}
-                height={2}
-                width={16}
-                alt="btn"
-            />
+            {src}
         </button>
     )
 }
 
 interface BuyNowButtonType{
-    src: string,
+    src: any,
     text: string,
     onClick: any,
     clx: string,
@@ -37,13 +33,7 @@ const BuyNowButton = ({ src, text, onClick, clx, textClx }: BuyNowButtonType) =>
             onClick={onClick}
             className={`flex items-center justify-center transition-all py-[0px] px-[20px] rounded-[5px] ${clx}`}
         >
-            <Image 
-                src={src}
-                width={24}
-                height={24}
-                alt="btn"
-                className="mr-[8px]"
-            />
+           {src}
             <div
                 className={`text-sixteen font-sixHundrend ${textClx}`}
             >{text}</div>
@@ -81,7 +71,7 @@ const BuyButton = () => {
             className="flex mr-[10px]"
         >
             <Buttons 
-                src="/minus.svg"
+                src={<SubtractIcon />}
                 onClick={handleReduceQuantity}
             />
             <div
@@ -90,7 +80,7 @@ const BuyButton = () => {
                 {quantity}
             </div>
             <Buttons 
-                src="/add 1.svg"
+                src={<AddIcon />}
                 onClick={handleAddQuantity}
             />
         </div>
@@ -98,14 +88,14 @@ const BuyButton = () => {
             clx="bg-primary mr-[10px] hover:bg-[#af1313bb]"
             onClick={handleBuy}
             text="Buy now"
-            src="/icon.svg"
+            src={<Cart clx="mr-[8px]"/>}
             textClx="text-primary"
         />
         <BuyNowButton 
             clx="border-[1.5px] border-[#AF1313] hover:opacity-[0.8] "
             onClick={handleSave}
             text="Save for later"
-            src="/love.svg"
+            src={<LikeIcon clx="mr-[8px]" />}
             textClx="text-secondary"
         />
     </div>

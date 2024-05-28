@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import css from "@/components/ButtonTransition.module.css";
+import { RightIcon } from "@/components/SVGs";
 interface data {
     href: string,
     text: string,
@@ -13,13 +14,10 @@ const BodyButton = ({ href, text, props } : data) => {
           className={`${css.bu} bg-[#E9A501] text-[#222222] font-sixHundrend text-[14px] md:text-sixteen py-[16px] px-[24px] flex items-center w-fit rounded-[5px] transition-all hover:bg-[#e9a301db] ${props != undefined ? props : ""}`} 
           href={href}
               >{text} 
-                  <Image 
-                      height={20} 
-                      width={20} 
-                      alt="dropdown" 
-                      src={"/right.svg"}
-                      className={`ml-[20px] ${css.bodyBotton}`} 
-                  />
+                <RightIcon 
+                    clx={`ml-[20px] ${css.bodyBotton}`}
+                />
+                  
               </Link>
     )
   }

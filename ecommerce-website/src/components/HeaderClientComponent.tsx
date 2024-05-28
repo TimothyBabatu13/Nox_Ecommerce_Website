@@ -1,9 +1,10 @@
 "use client";
 
-import Image from "next/image";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
+import { SearchIcon } from "./SVGs";
 
 const NotAuthenticated = () => {
   return(
@@ -63,15 +64,12 @@ const HeaderClientComponent = ({
               placeholder="Search for something..." 
               ref={ref}
             />
-            <Image 
-              height={24} 
-              width={24} 
-              alt="email" 
-              src="/search.svg"
-              className="absolute top-[50%] -translate-y-1/2 left-[24px]" 
-              role="button"
+            <button
+              className="absolute top-[50%] -translate-y-1/2 left-[24px]"
               onClick={handleFocus}
-            />
+            >
+              <SearchIcon />
+            </button>
             <button 
               type="submit"
               onClick={handleSearch}

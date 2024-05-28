@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { FacebookIcon, InstagramIcon, TwitterIcon } from "./SVGs"
 
 const data = [
     {
@@ -83,38 +84,33 @@ const H1 = ({ text }: textData) => {
 interface SocialMediaLinkData {
     img: string,
     href: string,
-    name: string
+    children: any
 }
-const SocialMediaLink = ({ img, href, name } : SocialMediaLinkData)  => {
+const SocialMediaLink = ({ img, href, children } : SocialMediaLinkData)  => {
     return (
         <Link 
             href={href}
             className="mr-[20px] lg:mr-0 hover:-translate-y-[10px] transition-all"
             target="_blank"
         >
-            <Image 
-                width={40}
-                height={40}
-                alt={name}
-                src={img}
-            />
+            {children}
         </Link>
     )
 }
 
 const socialMediaData : SocialMediaLinkData[] = [
     {
-        name: "Facebook",
         img: "/facebook.svg",
-        href: ""
+        href: "",
+        children: <FacebookIcon />
     },
     {
-        name: "Instagram",
+        children: <InstagramIcon />,
         img: "/instagram.svg",
         href: "https://www.instagram.com/timothy_akanbi"
     },
     {
-        name: "Twitter",
+        children: <TwitterIcon />,
         img: "/twitter.svg",
         href: "https://www.twitter.com/timothy_akanbii"
     },
@@ -153,7 +149,7 @@ const FooterLinks = () => {
                         key={id}
                         img={item.img}
                         href={item.href}
-                        name={item.name}
+                        children={item.children}
                     />
                 ))
             }

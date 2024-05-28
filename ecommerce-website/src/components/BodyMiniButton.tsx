@@ -1,7 +1,7 @@
 
 import Link from "next/link";
-import Image from "next/image";
 import css from "@/components/ButtonTransition.module.css";
+import { LinkIcon } from "./SVGs";
 
 
 interface data {
@@ -15,12 +15,8 @@ const BodyMiniButton = ({ link, text, props }: data) => {
         href={link}
         className={`flex ${css.bu} ${props != undefined ? props : ""}`}
     >   <div className={css.miniButton}>{text}</div>
-        <Image 
-            width={22}
-            height={20} 
-            alt="link" 
-            src="/link.svg"
-            className={`ml-[4px]`}
+        <LinkIcon 
+          clx={`ml-[4px]`}
         />
     </Link>
   )

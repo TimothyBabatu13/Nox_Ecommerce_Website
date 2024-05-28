@@ -1,10 +1,10 @@
-import Image from "next/image"
 import Link from "next/link"
 import CopyLinkButton from "./CopyLinkButton"
+import { Facebook1, Twitter1, Whatsapp1 } from "@/components/SVGs"
 
 interface SocialHandlesType {
     href: string,
-    src: string,
+    src: any,
     text: string,
     clx: any
 }
@@ -12,13 +12,7 @@ interface SocialHandlesType {
 const SocialHandles = ({ href, src, text, clx } : SocialHandlesType) => {
     
     return <Link href={href} className={`flex w-[120px] py-[14px] rounded-[5px] justify-center items-center ${clx}`}>
-        <Image 
-            src={src}
-            height={16}
-            width={16}
-            alt="social media icon"
-            className="mr-[5px]"
-        />
+        {src}
         <h5
             className="text-primary font-[500] text-fourteen"
         >
@@ -29,23 +23,23 @@ const SocialHandles = ({ href, src, text, clx } : SocialHandlesType) => {
 
 interface dataTpe {
     text: string,
-    src: string,
+    src: any,
     href: string,
 }
 const data: dataTpe[] = [
     {
         text: "Facebook",
-        src: "/facebook1.svg",
+        src: <Facebook1 />,
         href: ""
     },
     {
         text: "Twitter",
-        src: "/twitter1.svg",
+        src: <Twitter1 />,
         href: ""
     },
     {
         text: "Whatsapp",
-        src: "/whatsapp1.svg",
+        src: <Whatsapp1 />,
         href: ""
     }
 ]
