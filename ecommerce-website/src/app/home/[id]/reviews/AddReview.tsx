@@ -7,7 +7,7 @@ interface NoOfReviewLogicType{
   likes: any
 } 
 const NoOfReviewLogic = ({ likes } : NoOfReviewLogicType) => {
-  const [noOFLikes, setNoOfLikes] = useState<number>();
+  const [noOFLikes, setNoOfLikes] = useState<number>(0);
   const number : string[] = ['', '', '', '', '', ''];
   
   const handleClick = (e : number) => {
