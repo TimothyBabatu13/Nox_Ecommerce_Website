@@ -17,6 +17,7 @@ const BodyMiniButton = ({ link, text, props }: data) => {
     >   <div className={css.miniButton}>{text}</div>
         <LinkIcon 
           clx={`ml-[4px]`}
+            color=""
         />
     </Link>
   )
