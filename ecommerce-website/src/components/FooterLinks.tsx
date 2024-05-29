@@ -149,8 +149,9 @@ const FooterLinks = () => {
                         key={id}
                         img={item.img}
                         href={item.href}
-                        children={item.children}
-                    />
+                    >
+                        {item.children}
+                    </SocialMediaLink>
                 ))
             }
            </div>
