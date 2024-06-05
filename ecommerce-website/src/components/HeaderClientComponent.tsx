@@ -11,12 +11,14 @@ const NotAuthenticated = () => {
     <section>
       <Link 
         href={"/login"}
+        prefetch
         className="text-secondary"
       >
         Login 
       </Link>
       <Link 
         href={"/register"}
+        prefetch
         className="bg-primary font-sevenHundred text-primary py-[16px] px-[24px] rounded-[5px] ml-[30px] transition-all hover:bg-[#af1313d0]"
       > 
         Register Now 

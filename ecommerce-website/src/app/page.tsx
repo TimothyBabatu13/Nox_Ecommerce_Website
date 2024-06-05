@@ -6,29 +6,42 @@ import Model from "@/components/Model";
 import Review from "@/components/Review";
 import Why from "@/components/Why";
 import Wrapper from "@/components/Wrapper";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <main className="">
       <Wrapper>
-        <Body />
+        <Suspense fallback={<></>}>
+          <Body />
+        </Suspense>
         <Info />
       </Wrapper>
-      <Why />
+      <Suspense fallback={<></>}>
+        <Why />
+      </Suspense>
       <Wrapper>
-        <Model />
-        <Review />
-        <Banner 
-          title="Simple is Beautiful"
-          text="You realize how much you wanna feel thos beats"
-          reverse={false}
-        />
-        <div className="mt-[100px] mb-[100px]">
+        <Suspense fallback={<></>}>
+          <Model />
+        </Suspense>
+        <Suspense fallback={<></>}>
+          <Review />
+        </Suspense>
+        <Suspense fallback={<></>}>
           <Banner 
-            title="Your Comfort, Our Pride"
-            text="You realize how much you wanna feel those beats"
-            reverse
+            title="Simple is Beautiful"
+            text="You realize how much you wanna feel thos beats"
+            reverse={false}
           />
+        </Suspense>
+        <div className="mt-[100px] mb-[100px]">
+          <Suspense fallback={<></>}>
+            <Banner 
+              title="Your Comfort, Our Pride"
+              text="You realize how much you wanna feel those beats"
+              reverse
+            />
+          </Suspense>
         </div>
         <Camera />
       </Wrapper>

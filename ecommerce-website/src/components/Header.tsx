@@ -24,9 +24,10 @@ const Header = () => {
                 <UserProfile />
                 <LinkImage
                     href="/home/saved"
-                    children={<LikedIcon clx="mr-[8px]"/>}
                     text="Saved"
-                />
+                >
+                    <LikedIcon clx="mr-[8px]"/>
+                </LinkImage>
                 <Cart />
             </HeaderClientComponent>
                 {/* <Link 
