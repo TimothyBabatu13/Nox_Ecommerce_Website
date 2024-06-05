@@ -6,7 +6,6 @@ import ClientLinks from "./components/ClientLinks";
 import SimilarProducts from "./components/SimilarProducts";
 import WhatWeOffer from "./components/WhatWeOffer";
 import Scroll from "./components/Scroll";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "MARCSONIC",
@@ -50,28 +49,21 @@ export default function RootLayout({
       <div 
         className="grid md:grid-cols-2 gap-[40px]"
       >
-        <Suspense fallback={<></>}>
-          <ProductsImage 
-            id={id}
-          />
-        </Suspense>
-        <Suspense fallback={<></>}>
-          <ProductsDetails 
-            id={id}
-          />
-        </Suspense>
+        <ProductsImage 
+          id={id}
+        />
+        <ProductsDetails 
+          id={id}
+        />
       </div>
       <ClientLinks id={id}/>
       {children}
       <div className="mt-[99px]">
         <h3 className=" text-[32px] text-[#1D1616] font-sixHundrend mb-[40px]">Similar Items you might Like</h3>
-        <Suspense fallback={<></>}>
-          <SimilarProducts />
-        </Suspense>
+        <SimilarProducts />
       </div>
-      <Suspense fallback={<></>}>
-        <WhatWeOffer />
-      </Suspense>
+      <WhatWeOffer />
     </main>
   );
 }
+
