@@ -21,7 +21,7 @@ const OrderProducts = () => {
   return (
     <>
         {data.map((item, id) => (
-            <OrderCard src={item.src} quantity={item.quantity} price={item.price}/>
+            <OrderCard key={id} src={item.src} quantity={item.quantity} price={item.price}/>
         ))}
     </>
   )
