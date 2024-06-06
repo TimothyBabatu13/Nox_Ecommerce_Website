@@ -7,6 +7,7 @@ const Form = () => {
     
     const { details } = useContext(CartContextProvider);
     
+    if(details.length < 1) return;
     const newArr = details.map(item => item.price * item.quantity);
     const amount = newArr.reduce((a, b) => a + b);
 

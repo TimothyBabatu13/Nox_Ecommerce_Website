@@ -19,7 +19,7 @@ const TableDetails = () => {
 
   return (
     <>
-        {data.map((elem, id) =>(
+        {data?.map((elem, id) =>(
             <tr className="border-b border-b-[#C4C4C4] " key={id}>
                 <td className="text-[#574240] text-[20px] font-sixHundrend">{elem?.product }</td>
                 <td className="text-[#574240] text-[20px] font-sixHundrend">{"$"+elem?.price }</td>
