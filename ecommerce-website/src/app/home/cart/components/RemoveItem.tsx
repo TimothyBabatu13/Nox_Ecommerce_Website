@@ -1,8 +1,7 @@
 'use client'
 
 import { RemoveButton } from "@/components/SVGs"
-import { CartContextProvider } from "@/context/CartContext"
-import { useContext } from "react"
+import {  useCartContext } from "@/context/CartContext"
 
 
 interface RemoveItemProp {
@@ -11,7 +10,7 @@ interface RemoveItemProp {
 
 const RemoveItem = ( { id } : RemoveItemProp) => {
 
-    const { func } = useContext(CartContextProvider);
+    const { func } = useCartContext();
 
     const handleRemove = () => {
         func((prev : any[]) => (

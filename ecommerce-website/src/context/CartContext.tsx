@@ -17,6 +17,7 @@ export const CartContextProvider = createContext<CartContextProviderProps | null
 
 
 
+
 const CartContext = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     const data = [{
         src: "/speaker.svg",
@@ -57,3 +58,12 @@ const CartContext = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 }
 
 export default CartContext;
+
+
+export const useCartContext = () => {
+    const context = useContext(CartContextProvider);
+    if (context === null) {
+        throw new Error("useCartContext must be used within a CartContextProvider");
+    }
+    return context;
+};

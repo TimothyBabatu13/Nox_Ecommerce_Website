@@ -1,8 +1,7 @@
 'use client';
-import React, { useContext } from 'react'
-import { CartContextProvider } from '@/context/CartContext';
+import {  useCartContext } from '@/context/CartContext';
 const Number = () => {
-    const { details } = useContext(CartContextProvider)
+    const { details } = useCartContext()
 
   return (
     <div 

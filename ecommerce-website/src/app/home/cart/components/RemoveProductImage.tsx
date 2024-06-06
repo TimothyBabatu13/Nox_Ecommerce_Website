@@ -1,14 +1,14 @@
 'use client';
 
 import { ProductCancel } from "@/components/SVGs"
-import { CartContextProvider } from "@/context/CartContext";
-import { useContext } from "react";
+import { useCartContext } from "@/context/CartContext";
+
 
 interface RemoveProductImageProps {
     id: any
 }
 const RemoveProductImage = ({ id } : RemoveProductImageProps) => {
-  const { func } = useContext(CartContextProvider);
+  const { func } = useCartContext();
 
     const handleDelete = (id : any) => {
         func((prev : any[]) => (

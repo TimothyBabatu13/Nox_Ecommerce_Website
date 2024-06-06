@@ -1,11 +1,11 @@
 'use client';
-import { CartContextProvider } from "@/context/CartContext";
-import { FormEvent, useContext, useEffect } from "react"
+import {  useCartContext } from "@/context/CartContext";
+import { FormEvent } from "react"
 
 
 const Form = () => {
     
-    const { details } = useContext(CartContextProvider);
+    const { details } = useCartContext();
     
     if(details.length < 1) return;
     const newArr = details.map(item => item.price * item.quantity);

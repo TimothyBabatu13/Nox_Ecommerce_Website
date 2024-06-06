@@ -1,4 +1,3 @@
-import { ProductCancel } from "@/components/SVGs"
 import Image from "next/image"
 import RemoveProductImage from "./RemoveProductImage"
 

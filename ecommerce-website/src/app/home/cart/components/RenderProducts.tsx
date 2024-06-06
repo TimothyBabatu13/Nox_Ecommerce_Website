@@ -1,13 +1,12 @@
 'use client';
-import { CartContextProvider } from "@/context/CartContext"
-import { useContext } from "react"
+import {  useCartContext } from "@/context/CartContext"
 import CartProduct from "./CartProduct"
 import QuantityButton from "./QuantityButton";
 import RemoveItem from "./RemoveItem";
 
 
 const TableDetails = () => {
-    const { details } = useContext(CartContextProvider);
+    const { details } = useCartContext();
 
     const data = details.map((item, id) => ({
         product: <CartProduct src={item.src} id={item.id} />,
