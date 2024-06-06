@@ -1,5 +1,5 @@
 'use client'
-import React, { useContext, createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 
 interface dataProps {
@@ -13,7 +13,7 @@ interface CartContextProviderProps {
     details: dataProps[],
     func: any
 }
-export const CartContextProvider = createContext<CartContextProviderProps>();
+export const CartContextProvider = createContext<CartContextProviderProps | null>(null);
 
 
 
