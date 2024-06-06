@@ -13,7 +13,8 @@ interface CartContextProviderProps {
     details: dataProps[],
     func: any
 }
-export const CartContextProvider = createContext<CartContextProviderProps | null>(null);
+
+const CartContextProvider = createContext<CartContextProviderProps | null>(null);
 
 
 

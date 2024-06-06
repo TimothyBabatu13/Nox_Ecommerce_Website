@@ -1,9 +1,9 @@
 'use client';
 
-import { useCallback, useContext, useState } from "react";
+import { useCallback, useState } from "react";
 import Buttons from "../../components/Buttons";
 import { AddIcon, SubtractIcon } from "@/components/SVGs";
-import { CartContextProvider } from "@/context/CartContext";
+import { useCartContext } from "@/context/CartContext";
 
 interface QuantityButtonProps {
     num : number,
@@ -12,7 +12,7 @@ interface QuantityButtonProps {
 
 const QuantityButton = ({ num, id } : QuantityButtonProps) => {
 
-    const { details, func } = useContext(CartContextProvider);
+    const { details, func } = useCartContext();
 
     const [quantity, setQuantity] = useState<number>(num);
 
@@ -25,7 +25,6 @@ const QuantityButton = ({ num, id } : QuantityButtonProps) => {
         ))
     }
     const handleAddQuantity = useCallback(() =>{
-        
         handleChange();
         setQuantity(prev => prev + 1);
     }, [quantity])
