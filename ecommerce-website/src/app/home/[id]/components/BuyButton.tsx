@@ -1,24 +1,9 @@
 'use client';
 import { AddIcon, Cart, LikeIcon, SubtractIcon } from "@/components/SVGs";
-import Image from "next/image"
 import { useState } from "react"
-
-interface ButtonsType {
-    src: any,
-    onClick: any
-}
+import Buttons from "../../components/Buttons";
 
 
-const Buttons = ({ src, onClick } : ButtonsType) => {
-    return(
-        <button
-            className="w-[40px] h-[48px] border border-[#BFA5A3] flex items-center justify-center"
-            onClick={onClick}
-        >
-            {src}
-        </button>
-    )
-}
 
 interface BuyNowButtonType{
     src: any,

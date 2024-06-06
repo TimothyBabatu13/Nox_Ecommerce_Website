@@ -9,7 +9,7 @@ interface CartProductProps {
 
 const CartProduct = ({ src, id } : CartProductProps) => {
   return (
-    <main className="py-[24px] border-b border-b-[#C4C4C4] flex items-center">
+    <main className="py-[24px] flex items-center">
         <div className="relative w-[128px]">
             <Image
                 width={128}

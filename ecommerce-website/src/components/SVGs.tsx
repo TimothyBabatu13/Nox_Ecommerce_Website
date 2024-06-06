@@ -372,3 +372,13 @@ export const ProductCancel = ()=> {
 
   )
 }
+
+export const RemoveButton = () => {
+  return(
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="47" height="47" rx="4.5" stroke="#141414" stroke-opacity="0.6"/>
+<path d="M28.105 20.3018L20.2422 28.1646M28.105 28.1646L20.2422 20.3018" stroke="#141414" stroke-opacity="0.6" stroke-width="1.02857" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.1742 33.8328C29.4762 33.8328 33.7742 29.5347 33.7742 24.2328C33.7742 18.9309 29.4762 14.6328 24.1742 14.6328C18.8723 14.6328 14.5742 18.9309 14.5742 24.2328C14.5742 29.5347 18.8723 33.8328 24.1742 33.8328Z" stroke="#141414" stroke-opacity="0.6" stroke-width="1.02857" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+  )
+}

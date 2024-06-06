@@ -1,31 +1,40 @@
+import Table from "@/components/Table"
 import CartProduct from "./CartProduct"
+import TableDetails from "./RenderProducts"
+import Form from "./Form"
 
-
-const TableText = () => {
-    return (
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </section>
-    )
-}
-
-interface H1PropType {
-    text: string
-}
-const H1 = ({text} : H1PropType)=> {
-    return(
-        <h1 className="text-[#574240] text-[20px] font-sixHundrend">{text}</h1>
-    )
-}
+const TableHead = [
+    {
+        text: "PRODUCT",
+        style: ""
+    },
+    {
+        text: "PRICE",
+        style: ""
+    },
+    {
+        text: "QUANTITY",
+        style: ""
+    },
+    {
+        text: "Remove",
+        style: ""
+    },
+    {
+        text: "SUBTOTAL",
+        style: ""
+    },
+]
 
 const CartTable = () => {
   return (
     <div>
-        <div className="flex justify-between mt-[72px] border-b py-[16px] border-b-[#C4C4C4]">
+        <Table 
+            tableHead={TableHead}
+        >
+            <TableDetails />
+        </Table>
+        {/* <div className="flex justify-between mt-[72px] border-b py-[16px] border-b-[#C4C4C4]">
             <H1 text="PRODUCT" />
             <H1 text="PRICE" />
             <H1 text="QUANTITY"/>
@@ -36,7 +45,8 @@ const CartTable = () => {
         <CartProduct src="/speaker.svg" id={2}/>
         <CartProduct src="/speaker.svg" id={3}/>
         <CartProduct src="/speaker.svg" id={4}/>
-        <CartProduct src="/speaker.svg" id={5}/>
+        <CartProduct src="/speaker.svg" id={5}/> */}
+        <Form />
     </div>
   )
 }

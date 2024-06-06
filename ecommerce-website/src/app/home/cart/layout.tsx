@@ -29,10 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-interface layoutType {
-  children: any,
-  id: string
-}
+
 export default function RootLayout({
   children, 
 }: Readonly<{
