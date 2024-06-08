@@ -16,7 +16,7 @@ const BillingDetailsForm = () => {
         email: ''
 
     });
-    const handleChange = ( e ) => {
+    const handleChange = ( e: any ) => {
         setFormData((prev : any) => ({
             ...prev,
             [e.target.name]: e.target.value
