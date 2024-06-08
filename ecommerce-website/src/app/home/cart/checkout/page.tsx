@@ -1,8 +1,12 @@
+import CheckOutContainer from "./components/CheckOutContainer"
+import CheckoutLayout from "./components/CheckoutLayout"
 
 
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <CheckOutContainer />
+    </div>
   )
 }
 

@@ -382,3 +382,21 @@ export const RemoveButton = () => {
 </svg>
   )
 }
+
+
+export const InactiveLink = () => {
+  return (
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="16" fill="#BFA5A3" fill-opacity="0.5"/>
+  <g clip-path="url(#clip0_127_2929)">
+  <path d="M8 16.5105L13.4791 22.0001L24 11.4896L22.4896 10L13.4791 19L9.48953 15.0105L8 16.5105Z" fill="white"/>
+  </g>
+  <defs>
+  <clipPath id="clip0_127_2929">
+  <rect width="16" height="16" fill="white" transform="translate(8 8)"/>
+  </clipPath>
+  </defs>
+</svg>
+
+  )
+}

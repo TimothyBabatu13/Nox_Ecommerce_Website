@@ -11,8 +11,6 @@ const Form = () => {
     if(details.length < 1) return;
     const newArr = details.map(item => item.price * item.quantity);
     const amount = newArr.reduce((a, b) => a + b);
-
-    
     
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();

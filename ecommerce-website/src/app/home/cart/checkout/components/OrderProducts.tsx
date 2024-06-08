@@ -7,7 +7,6 @@ const OrderProducts = () => {
 
     const { details } = useCartContext();
 
-    // console.log(details)
     const data = details.map(item => (
         {
             src: item.src,
@@ -15,8 +14,6 @@ const OrderProducts = () => {
             price: item.price
         }
     ))
-
-    // console.log(data)
   
   return (
     <>

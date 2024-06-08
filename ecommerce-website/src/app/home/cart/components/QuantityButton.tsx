@@ -12,32 +12,32 @@ interface QuantityButtonProps {
 
 const QuantityButton = ({ num, id } : QuantityButtonProps) => {
 
-    const { details, func } = useCartContext();
+    const { func } = useCartContext();
 
     const [quantity, setQuantity] = useState<number>(num);
 
-
-    const handleChange = () => {
+    
+    const handleChange = (q: number) => {
         func((prev : any[]) => (
             prev.map(item =>{
-                return item.id === id ? {...item, quantity} : {...item};
+                return item.id === id ? {...item, quantity: q} : {...item};
             })
         ))
     }
-    const handleAddQuantity = useCallback(() =>{
-        handleChange();
+
+    const handleAddQuantity = () =>{
+        handleChange(quantity + 1);
         setQuantity(prev => prev + 1);
-    }, [quantity])
+    }
 
 
-
-    // console.log(details)
     const handleReduceQuantity = () => {
         setQuantity(prev =>{
             if(prev === 1) return 1;
             return prev - 1;
         })
-        handleChange()
+        if(quantity - 1 === 0) return;
+        handleChange(quantity - 1);
     }
 
   return (

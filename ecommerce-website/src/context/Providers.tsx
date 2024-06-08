@@ -1,3 +1,4 @@
+import AuthContext from "./AuthContext";
 import CartContext from "./CartContext"
 
 const Providers = ({ children,
@@ -5,9 +6,12 @@ const Providers = ({ children,
   children: React.ReactNode;
 }>) => {
   return (
-   <CartContext>
+    <AuthContext>
+      <CartContext>
         {children}
-    </CartContext>
+      </CartContext>
+    </AuthContext>
+   
   )
 }
 
