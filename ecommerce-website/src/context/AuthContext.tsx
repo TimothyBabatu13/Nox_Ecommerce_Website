@@ -17,7 +17,8 @@ const AuthContext = ({ children } : { children: React.ReactElement }) => {
     const route = useRouter();
 
     const [active, setIsActive] = useState<any>({
-        isActive: (window.localStorage.getItem('active-token') && window.localStorage.getItem('active-token') === token) ? true : false
+        isActive: true
+        // isActive: (window.localStorage.getItem('active-token') && window.localStorage.getItem('active-token') === token) ? true : false
     });
 
     
