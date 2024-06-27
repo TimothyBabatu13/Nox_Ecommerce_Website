@@ -1,4 +1,5 @@
 import AuthContext from "./AuthContext";
+import BillingContext from "./BillingContext";
 import CartContext from "./CartContext"
 
 const Providers = ({ children,
@@ -8,7 +9,9 @@ const Providers = ({ children,
   return (
     <AuthContext>
       <CartContext>
-        {children}
+        <BillingContext>
+          {children}
+        </BillingContext>
       </CartContext>
     </AuthContext>
    

@@ -6,7 +6,7 @@ interface LayoutProps {
 const layout = ({ children } : LayoutProps)  => {
   return (
     <main className="flex mt-[87px]">
-        <div className="border border-[#141414] w-[55%] mr-[32px] py-[30px] px-[40px]">{children}</div>
+        <div className=" w-[55%] mr-[32px] ">{children}</div>
         <div className="w-[45%] border border-[#BFA5A3]"><Order /></div>
     </main>
   )
